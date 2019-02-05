@@ -81,12 +81,12 @@
                 <th>On/off</th>
             </thead>
             <tr>
-                <td id="red"><img id="red_bulb" src="red.jpg" width="100px" /></td>
+                <td id="red"><img id="red_bulb" src="/demo/1/red.jpg" width="100px" /></td>
                 <td class="state" style="display:none;">On</td>
                 <td> <button class="button" id="1" onclick="myFunction(event)">Switch ON / OFF</button> </td>
             </tr>
             <tr>
-                <td id="green "><img id="green_bulb" src="green.jpg" width="75px" /></td>
+                <td id="green "><img id="green_bulb" src="/demo/1/green.jpg" width="75px" /></td>
                 <td class="state" style="display:none;">On</td>
                 <td> <button class="button" id="2" onclick="myFunction(event)">Switch ON / OFF</button> </td>
             </tr>
@@ -111,10 +111,10 @@
                 var image = document.getElementById('red_bulb');
                 if (bulb_state.bulb1 == "0") {
                     x[1].innerHTML = "Off";
-                    image.src = "gray1.jpg.";
+                    image.src = "/demo/1/gray1.jpg";
                 } else {
                     x[1].innerHTML = "On";
-                    image.src = "red.jpg."
+                    image.src = "/demo/1/red.jpg"
                 }
             }
 
@@ -123,10 +123,10 @@
                 var image = document.getElementById('green_bulb');
                 if (bulb_state.bulb2 === "0") {
                     x[1].innerHTML = "Off";
-                    image.src = "gray2.jpg."
+                    image.src = "/demo/1/gray2.jpg"
                 } else {
                     x[1].innerHTML = "On";
-                    image.src = "green.jpg."
+                    image.src = "/demo/1/green.jpg"
                 }
             }
             //
@@ -141,11 +141,11 @@
                 var image = document.getElementById('red_bulb');
                 if (x[1].innerHTML === "On") {
                     x[1].innerHTML = "Off";
-                    image.src = "gray1.jpg.";
+                    image.src = "/demo/1/gray1.jpg";
                     bulb_dic["bulb" + id] = "0";
                 } else {
                     x[1].innerHTML = "On";
-                    image.src = "red.jpg."
+                    image.src = "/demo/1/red.jpg"
                     bulb_dic["bulb" + id] = "1";
                 }
             } else if (id === "2") {
@@ -153,11 +153,11 @@
                 var image = document.getElementById('green_bulb');
                 if (x[1].innerHTML === "On") {
                     x[1].innerHTML = "Off";
-                    image.src = "gray2.jpg."
+                    image.src = "/demo/1/gray2.jpg"
                     bulb_dic["bulb" + id] = "0";
                 } else {
                     x[1].innerHTML = "On";
-                    image.src = "green.jpg."
+                    image.src = "/demo/1/green.jpg"
                     bulb_dic["bulb" + id] = "1";
                 }
             }
