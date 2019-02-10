@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+        Assignment_7_06
+    </title>
+    <style>
+        h1 {
+            text-align: center;
+            color: white
+        }
+
+        table {
+            table-layout: auto;
+            width: 40%;
+            /* height:60%; */
+            border-radius: 15px;
+            align-items: center;
+            border: 1px solid rgb(133, 100, 100);
+            padding: 15px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            /* background-color: rgb(111, 179, 206); */
+            background-color: ghostwhite;
+            border-spacing: 15px;
+        }
+
+        .entire {
+            width: 100%;
+            height: 100%;
+            /* font-size: 20px */
+        }
+
+        body {
+            /* background-color: ghostwhite */
+            background-color: black
+        }
+    </style>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            document.getElementById("submit").addEventListener("click", function (event) {
+
+                let name = document.querySelector('#name')
+                let age = document.querySelector("#age")
+                let gender_male = document.querySelector("#gender_male")
+                let gender_female = document.querySelector("#gender_female")
+                let output = document.querySelector('#output')
+                let error = document.querySelector('#error')
+                let mob_no = document.querySelector("#mob_no")
+                // let hobbies = document.querySelector("#hobbies")
+
+                if (name.value.length > 0) {
+                    output.value = "Name : " + name.value + ", "
+                } else if (name.value.length <= 15) {
+                    error.value = "1- Name should not be blank/ Name should be less than 15 characters. "
+                }
+
+                if (parseInt(age.value) == undefined) {
+                    error.value = error.value + "Age should be numeric. "
+                } else if (age.value <= 0) {
+                    error.value = error.value + "Age should not be negative. "
+                } else {
+                    output.value = output.value + "Age : " + age.value + ", "
+                }
+
+                if (gender_male.checked) {
+                    output.value = output.value + "Gender : " + gender_male.value + ", "
+                } else if (gender_female.checked) {
+                    output.value = output.value + "Gender : " + gender_female.value + ", "
+                } else {
+                    error.value = error.value + "Gender must be selected. "
+                }
+
+                if (mob_no.value != null) {
+                    output.value = output.value + "Phone : " + mob_no.value + ", "
+                }
+
+                var checkedValue = [];
+                var inputElements = document.getElementsByClassName('cbox');
+                for (var i = 0; inputElements[i]; ++i) {
+                    if (inputElements[i].checked) {
+                        checkedValue.push(inputElements[i].value);
+                    }
+                }
+
+                output.value = output.value + "Hobbies : " + checkedValue
+
+
+            });
+
+        });
+
+    </script>
+</head>
+
+<body>
+    <div clas="entire">
+        <div>
+            <h1>A simple form with functions</h1>
+        </div>
+        <form action="" onsubmit="return false">
+            <table align=center>
+                <tr>
+                    <td>Name:</td>
+                    <td><input type="text" id="name" /></td>
+                </tr>
+                <tr>
+                    <td>Age:</td>
+                    <td><input type="number" id="age" /></td>
+                </tr>
+                <tr>
+                    <td>Gender :</td>
+                    <td>
+                        <input type="radio" id="gender_male" value="Male" />Male
+                        <input type="radio" id="gender_female" value="Female" />Female
+                    </td>
+                </tr>
+                <tr>
+                    <td>Phone:</td>
+                    <td><input type="number" id="mob_no" /></td>
+                </tr>
+                <tr>
+                    <td>Hobbies:</td>
+                    <td>
+                        <input class="cbox" type="checkbox" id="checkbox_1" value="Reading" />Reading
+                        <input class="cbox" type="checkbox" id="checkbox_2" value="Sports" />Sports
+                        <input class="cbox" type="checkbox" id="checkbox_3" value="Movies" />Movies
+                        <input class="cbox" type="checkbox" id="checkbox_4" value="Travelling" />Travelling
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <button id="submit">Sumbit</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>OUTPUT:</td>
+                    <td><textarea id="output" rows="4" cols="40"></textarea></td>
+                </tr>
+                <tr>
+                    <td>
+                        ERRORS:
+                    </td>
+                    <td><textarea id="error" rows="4" cols="40"></textarea></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+</body>
+
+</html>

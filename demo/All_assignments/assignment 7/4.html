@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function myfnc() {
+            let x = document.getElementById("input").value;
+            var sum = 0;
+
+            for (let i = 0; i <= x; i++) {
+                sum = sum + i;
+            }
+
+            alert(`The sum of first ${x} integers is ${sum}`)
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Sum of n numbers</h1>
+    <p>
+        Enter the n'th number to calculate the sum : <input type="number" id="input" />
+    </p>
+    <p>
+        <input type="submit" value="Calculate" onclick="myfnc()" />
+    </p>
+
+</body>
+
+</html>
