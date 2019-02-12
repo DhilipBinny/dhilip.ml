@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Assignment_7_01</title>
+    <script>
+        function myfnc() {
+            var x = document.getElementById("input").value;
+            var output = ""
+
+            if (x < 12) {
+                output = "GOOD MORNING";
+                alert(output);
+            }
+            else {
+                output = "GOOD AFTERNOON";
+                alert(output);
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <div>
+        Enter the Time of the day : <input type="number" id="input" />
+        <br>
+        <input type="submit" value="Greet me" onclick="myfnc()" />
+    </div>
+</body>
+
+</html>

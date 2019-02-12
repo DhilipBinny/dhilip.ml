@@ -1,0 +1,86 @@
+#whole_blk{
+    background-image: url("home_slider.jpg");
+    /* height: 100%;
+    width: 100%; */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#name{
+    text-align: center;
+    color: whitesmoke
+}
+.form{
+    text-align: left;
+    /* background-color: #fff; */
+    /* position: relative; */
+}
+#table_content{
+    font-family:  serif;
+    /* font-weight: bold */
+}
+.registerbtn{
+    float : left;
+}
+.resetbtn{
+    float:right;
+}
+#form_name{
+    text-align: right
+}
+table{
+    /* text-align: center; */
+    width: 50%;
+    background-color:white;
+    border-radius: 25px;
+    opacity:.8;
+    background-blend-mode: color-burn;
+    align-items: center
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid black;
+    /* border: 1; */
+    padding: 15px;
+    
+    /* padding: 20px 0; */
+    
+}
+input,textarea{
+    background-color: rgb(250, 250, 250);
+    padding: 4px;
+    margin: 1px;
+    font-weight: bold;
+}
+label{
+    font-size: 25px;
+    /* font-weight: bold */
+}
+.header{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: auto;
+}
+#header{
+    display: block;
+    /* background-color:rgb(201, 219, 235); */
+}
+Footer{
+    background:lightgray;
+}
+.radio,.checkbox{
+    font-weight: lighter
+}
+img{
+    float: right;
+    width: 200px;
+    height: 200px:
+}
+
+/* #image{
+    float: left; 
+    position: relative;
+} */
+
+
