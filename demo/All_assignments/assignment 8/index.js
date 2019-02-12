@@ -1,6 +1,8 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
+    document.querySelector("#book_elements").innerHTML="<p id='hhhh'> Fetching data from api, Please wait few seconds...</p>"
+
     var url = 'https://shoppingcart-backend-app.herokuapp.com/api/v1/product';
     fetch(url, 
         {
@@ -13,6 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
     )
     .then(resp  => resp.json() )
     .then(response => {
+        document.querySelector("#book_elements").innerHTML=""
+
         response.data.forEach(record_dict => {
             const li = create_books(record_dict.id,record_dict.name,record_dict.url,record_dict.price) 
 
