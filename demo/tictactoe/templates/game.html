@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tic Tac Toe</title>
+        <style>
+            body {
+                /* background-color: rgb(245, 28, 209); */
+                background-image: url("https://thumbs.dreamstime.com/z/tic-tac-toe-game-tic-tac-toe-game-drawn-colorful-pencils-white-background-124720935.jpg");
+            }
+            table.center{
+                border-collapse: collapse;
+                margin-left:auto; 
+                margin-right:auto;
+                margin-top: 100px;
+                margin-bottom: auto;
+                padding: 200px;
+            }
+            td {
+                border: 2px solid black;
+                width: 150px;
+                height: 150px;
+                font-size: 30px;
+                text-align: center;
+            }
+            td > a {
+                font-size: 18px;
+                color: maroon;
+            }
+            h3#reset {
+                color: rgb(0, 0, 0);
+                font-size: 25px;
+                text-align: center;
+                
+            }
+            h1#ttt {
+                font-style: normal;
+                color: rgb(63, 63, 63);
+                text-align: center;
+            }
+            td:hover {background-color:#f38884;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id = "ttt">TIC-TAC-TOE</h1>
+        <table class="center">
+            {% for i in range(3) %}
+                <tr>
+                    {% for j in range(3) %}
+                        <td>
+                            {% if game[i][j] %}
+                                {{ game[i][j] }}
+                            {% else %}
+                                <a href="{{ url_for('play', row=i, col=j) }}">Play {{ turn }}</a>
+                            {% endif %}
+                        </td>
+                    {% endfor %}
+                </tr>
+            {% endfor %}
+        </table>
+        <div>
+            {% if result[0] == True %}
+
+                <h1 id = "game_over"> Game Over:  Winner is {{ result[1] }} </h1>
+        
+            {% endif %}
+        </div>
+
+        <h3 id ="reset" >
+            <a href = "{{ url_for('reset')}}">Reset Game</a>
+        </h3>
+    </body>
+</html>
