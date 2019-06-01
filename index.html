@@ -178,6 +178,7 @@
                                     <p><a href="http://www.dhilip.ml/demo/1">Switch on/off the bulbs</a></p>
                                     <p><a href="http://www.dhilip.ml/demo/2">To Do List</a></p>
                                     <p><a href="http://www.dhilip.ml/demo/All_assignments">Html Css Assignments</a></p>
+                                    <p><a href="http://www.dhilip.ml/demo/All_assignments/assignment8">Simple shopping cart</a></p>
 
                                     <!-- <p>Demo 3</p> -->
                                 </div>
@@ -329,6 +330,13 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/tether/1.4.0/tether.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/bootstrap/4.0.0-alpha.5/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="javascript/index.js"></script>
+
+    <script async src="https://telegram.org/js/telegram-widget.js?5" data-telegram-login="Find_My_Bus_Leh_bot" data-size="large" data-onauth="onTelegramAuth(user)" data-request-access="write"></script>
+    <script type="text/javascript">
+    function onTelegramAuth(user) {
+        alert('Logged in as ' + user.first_name + ' ' + user.last_name + ' (' + user.id + (user.username ? ', @' + user.username : '') + ')');
+    }
+    </script>
 
 </body>
 
