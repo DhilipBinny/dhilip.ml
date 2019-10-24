@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Assignment_7_01</title>
+    <script>
+        function myfnc() {
+            var x = document.getElementById("input").value;
+            var output = ((3 * (x ** 3)) - (7 * (x ** 2)) + (2 * x) + 5);
+            document.getElementById("output").value = output;
+        }
+    </script>
+    <style>
+        h3{
+            text-align: center;
+        }
+        div{
+            padding: 15px;
+            position: relative;
+            width: 25%;
+            /* align-items: center; */
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+                    
+        }
+        body{
+            background-color:ghostwhite;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Calculate 3(x^3) - 7(x^2) +2x +5</h3>
+    <div>
+        Enter value of X to calculate : <input type="number" id="input" />
+        <br>
+        Answer is :<input type="number" id="output" />
+        <br>
+        <input type="submit" value="Compute" onclick="myfnc()" />
+    </div>
+</body>
+
+</html>
