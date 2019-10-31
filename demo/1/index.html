@@ -52,8 +52,13 @@
         }
 
         .chat{
-            background-color: bisque;
-            float: right;
+            /* height: 100%; */
+            left: 0px;
+             border: 0px none; 
+             position: fixed; 
+             width: 50%; 
+             overflow: hidden; 
+             bottom: 0;
         }
         .button{
             /* background-image: none; */
@@ -94,10 +99,19 @@
     </div>
 
     <div class="chat">
-
-        <iframe allow="microphone;" width="350" height="430" src="https://console.dialogflow.com/api-client/demo/embedded/5e49dd28-6010-4569-bb4a-e563ab319823">
+        <iframe allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/5e49dd28-6010-4569-bb4a-e563ab319823" scrolling="no" 
+        style="height: 400px; border: 0px none; width: 50%; margin-bottom: 0px; margin-left: 10px;">
         </iframe>
     </div>
+
+    <!-- <div style="left: 0px; border: 0px none; height: 370px; position: fixed; width: 270px; overflow: hidden; bottom: -67px;">
+        <div style="overflow: hidden;">
+        </div>
+        <iframe allow="microphone;" width="350" height="430" src="https://console.dialogflow.com/api-client/demo/embedded/5e49dd28-6010-4569-bb4a-e563ab319823">
+        <iframe src="http://weather.gc.ca/wxlink/wxlink.html?cityCode=on-162&amp;lang=e" scrolling="no" style="height: 300px; border: 0px none; width: 165px; margin-bottom: 0px; margin-left: 24px;">
+        </iframe>
+        </div>
+        </div> -->
 
     <script>
 
