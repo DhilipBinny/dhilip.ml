@@ -485,7 +485,11 @@ nav ul li a {
   text-align: center;
 }
 
-.journal-block .row {
+.journal-txt{
+  text-align: center;
+}
+
+.journal-block.row {
   text-align: center;
 }
 
