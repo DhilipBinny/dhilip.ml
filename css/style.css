@@ -477,10 +477,12 @@ nav ul li a {
   display: inline-block;
   height: auto;
   width: 100%;
+  text-align: center;
 }
 
 #journal .journal-block .journal-info {
   position: relative;
+  text-align: center;
 }
 
 .journal-block .journal-info img {
