@@ -24,7 +24,7 @@
 
         table {
             background-color: white;
-            width: 40%;
+            width: 70%;
             border: 1px solid black;
             border-collapse: collapse;
             margin-left: auto;
@@ -62,14 +62,15 @@
         }
         .button{
             /* background-image: none; */
-            background-color: gray;
-            opacity: 25%;
-            border: gray;      
+            background-color: #33d684;
+            /* opacity: 25%; */
+            /* border: gray;       */
             cursor:pointer;
             font: bold; 
             color: white;  
             height: 40px; 
-            border-block-end-style: groove;
+            /* border-block-end-style: groove; */
+            border-radius: 5px
             }
 
     </style>
@@ -81,19 +82,19 @@
     <div>
         <table id="myTable">
             <thead>
-                <th>Bulb_Colour</th>
+                <th>Bulbs</th>
                 <th style="display:none;">Bulb_State</th>
-                <th>On/off</th>
+                <th>ON / OFF</th>
             </thead>
             <tr>
                 <td id="red"><img id="red_bulb" src="/demo/1/red.jpg" width="100px" /></td>
                 <td class="state" style="display:none;">On</td>
-                <td> <button class="button" id="1" onclick="myFunction(event)">Switch ON / OFF</button> </td>
+                <td> <button class="button" id="1" onclick="myFunction(event)">Switch</button> </td>
             </tr>
             <tr>
                 <td id="green "><img id="green_bulb" src="/demo/1/green.jpg" width="75px" /></td>
                 <td class="state" style="display:none;">On</td>
-                <td> <button class="button" id="2" onclick="myFunction(event)">Switch ON / OFF</button> </td>
+                <td> <button class="button" id="2" onclick="myFunction(event)">Switch</button> </td>
             </tr>
         </table>
     </div>
