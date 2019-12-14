@@ -1,24 +1,91 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>
-            TO DO LIST
-        </title>
-        <script src="to-do-list.js"></script>
-        <style src = "to-do-list.css"></style>
 
-    </head>
-    <body background = http://www.pptbackgrounds.org/uploads/pen-container-powerpoint-templates.jpg>
-        <div id ="entire_block"  >
-            <div class ="blk_1" align="center"> 
-                <h2 >TO - DO - LIST</h2>
-                <hr>
-                <input id = "jobs" type="text" placeholder="Enter something to add.." >
-                <button id ="addtask" >ADD</button>
-                <button id = "delete_all">DELETE ALL</button>
-                <hr>
-            </div>
-            <ul id = "tasklist"></ul>
+<head>
+    <title>
+        TO DO LIST
+    </title>
+    <script src="to-do-list.js"></script>
+    <style>
+        #jobs {
+            width: 70%;
+            font-size: larger;
+            border-radius: 5px;
+        }
+
+        h2 {
+            font-size: xx-large;
+            color:ghostwhite
+        }
+        #addtask{
+            background-color: #1ef485;
+        }
+        #delete_all{
+            background-color: #f4511e;
+        }
+        #deleteme{
+            background-color: #f4511e;
+        }
+
+        .button {
+            border-radius: 5px;
+            
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            /* font-size: 28px; */
+            padding: 1%;
+            /* width: 200px; */
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 1%;
+        }
+
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+
+        .button:hover span {
+            padding-right: 25px;
+        }
+
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+
+        #tasklist{
+            color: ghostwhite;
+        }
+    </style>
+
+</head>
+
+<body background="bg.jpg">
+    <div id="entire_block">
+        <div class="blk_1" align="center">
+            <h2>TO - DO - LIST</h2>
+            <!-- <hr> -->
+            <input id="jobs" type="text" placeholder="Enter something to add..">
+            <button id="addtask" class="button"><span>ADD NEW </span></button>
+            <!-- <button id="delete_all">DELETE ALL</button> -->
+            <button id="delete_all" class="button"><span>DELETE ALL </span></button>
+            <!-- <hr> -->
         </div>
-    </body>
+        <ul id="tasklist" ></ul>
+    </div>
+</body>
+
 </html>
