@@ -70,7 +70,7 @@ function create_li (task_id, task){
     but.onclick = delete_task
 
     but.innerHTML = "DELETE ME"
-    but.id = "deleteme"
+
     but.className = "button"
     div.appendChild(par)
     div.appendChild(but)
