@@ -1,7 +1,9 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-
+    
+    // var url = 'http://127.0.0.1:5000/api/v1/task';
     var url = 'https://to-do-list-backend-server.herokuapp.com/api/v1/task';
+
     fetch(url, 
         {
             method: 'GET',
@@ -12,9 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     )
-    .then(resp  => {
-        resp.json()
-    } )
+    .then(resp  => resp.json() )
     .then(response => {
         console.log(response)
         response.data.forEach(record_dict => {
@@ -85,7 +85,9 @@ function create_li_ (task_id, task){
 function addtotable(){
     var task = document.querySelector('#jobs').value;
 
+    // var url = 'http://127.0.0.1:5000/api/v1/task';
         var url = 'https://to-do-list-backend-server.herokuapp.com/api/v1/task';
+
         var data = {"task": task };
 
         fetch(url, 
@@ -120,7 +122,9 @@ function delete_task(event){
 
     const element = event.target
     const id = event.target.id
+    // var url = 'http://127.0.0.1:5000/api/v1/task/delete';
     var url = 'https://to-do-list-backend-server.herokuapp.com/api/v1/task/delete';
+
     console.log(id)
     var data = {"task_id": id };
 
@@ -147,7 +151,9 @@ function delete_task(event){
 }
 
 function delete_all(event){
+    // var url = 'http://127.0.0.1:5000/api/v1/task/delete/all';
     var url = 'https://to-do-list-backend-server.herokuapp.com/api/v1/task/delete/all';
+
     fetch(url, 
         {
             method: 'DELETE',
