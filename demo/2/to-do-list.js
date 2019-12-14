@@ -66,11 +66,8 @@ function create_li (task_id, task){
     par.innerHTML = task
     var but = document.createElement("button")
     but.id = task_id
-     
     but.onclick = delete_task
-
     but.innerHTML = "DELETE ME"
-
     but.className = "button"
     div.appendChild(par)
     div.appendChild(but)
@@ -120,6 +117,7 @@ function delete_task(event){
     const element = event.target
     const id = event.target.id
     var url = 'https://to-do-list-backend-server.herokuapp.com/api/v1/task/delete';
+    console.log(id)
     var data = {"task_id": id };
 
     fetch(url, 
