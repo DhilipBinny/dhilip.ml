@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(resp  => resp.json() )
     .then(response => {
         response.data.forEach(record_dict => {
-            const li = create_li(record_dict.id,record_dict.task) 
+            const li = create_li_(record_dict.id,record_dict.task) 
 
             // document.querySelector("#tasklist").append(li)
             document.querySelector('#tasklist').insertBefore(li, document.querySelector("#tasklist").firstChild)
@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-function create_li (task_id, task){
+function create_li_ (task_id, task){
     var li = document.createElement("li")
 
     var div = document.createElement("div")
@@ -97,7 +97,7 @@ function addtotable(){
         )
         .then(resp  => resp.json() )
         .then(response => {
-            const li = create_li(response.id,task)
+            const li = create_li_(response.id,task)
             // document.querySelector('#tasklist').append(li);
             document.querySelector('#tasklist').insertBefore(li, document.querySelector("#tasklist").firstChild)
 
