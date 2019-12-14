@@ -12,8 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
     )
-    .then(resp  => resp.json() )
+    .then(resp  => {
+        resp.json()
+        console.log(resp.json())
+    } )
     .then(response => {
+        console.log(response)
         response.data.forEach(record_dict => {
             const li = create_li_(record_dict.id,record_dict.task) 
 
